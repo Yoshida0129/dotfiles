@@ -8,6 +8,9 @@ if [ "$(uname)" == 'Darwin' ]; then
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     echo setup for linux
     OS="linux"
+elif [ "$(expr substr $(uname -s) 1 5)" == "MINGW" ]; then
+    echo setup for windows
+    OS="windows"
 else
     echo "OS is unknown. exit setup."
     exit -1
@@ -19,7 +22,7 @@ function deploy() {
     ln -fnsv ~/dotfiles/vimfiles/.vim ~/.vim
     ln -fnsv ~/dotfiles/.gitconfig ~/.gitconfig
     ln -fnsv ~/dotfiles/.zprofile ~/.zprofile
-    ln -fnsv ~/dotfiles/.zashrc ~/.zshrc
+    ln -fnsv ~/dotfiles/.zshrc ~/.zshrc
     ln -fnsv ~/dotfiles/.Brewfile ~/.Brewfile
 
     touch ~/.zprofile_local
@@ -28,8 +31,10 @@ function deploy() {
 
 function deploy_app() {
     if [ "$OS" == "mac" ]; then
-        ln -fnsv ~/dotfiles/vscode ~/Library/Application\ Support/Code/User
-        ln -fnsv ~/dotfiles/hyper ~
+        ln -fnsv ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+        ln -fnsv ~/dotfiles/hyper/hyper.js ~/hyper.js
+    elif [ "$OS" == "windows"]; then
+        mklink /d %AppData%\Code\User\settings.json ~/dotfiles/vscode/settings.json
     fi
 }
 
@@ -46,7 +51,7 @@ function undeploy() {
     unlink ~/.Brewfile
 
     if [ "$OS" == "mac" ]; then
-        unlink ~/Library/Application\ Support/Code/User/setting.json
+        unlink ~/Library/Application\ Support/Code/User/settings.json
         unlink ~/.hyper.js
     elif [ "$OS" == 'linux' ]; then
         echo uninstall for linux
