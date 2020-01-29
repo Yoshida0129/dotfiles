@@ -1,0 +1,99 @@
+// {
+//     "workbench.iconTheme": "material-icon-theme",
+//     "window.zoomLevel": -2,
+//     "editor.fontSize": 18,
+//     "workbench.colorTheme": 
+// }
+{
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Rainbow Contrast (rainglow)",
+    "workbench.editor.enablePreview": false,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    // "ruby.codeCompletion": "rcodetools",
+    // "ruby.format":  "rubocop",
+    // "ruby.intellisense": "rubyLocate",
+    "workbench.editor.showTabs": true,
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "window.zoomLevel": -1,
+      /*Html, JavaScript, Vue*/
+  "files.associations": {
+    "*.vue": "vue"
+  },
+  // vueにcssのemmet追加
+  "emmet.syntaxProfiles": {
+    "vue": "css"
+  },
+  // vueだけで追加したい設定
+  "[vue]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.enable": true,
+  // 適応するファイルタイプを決定
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  // プロジェクト配下のeslintrc.jsを読み込み
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  },
+  // 保存時に自動フォーマット
+  "eslint.autoFixOnSave": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+  "vetur.validation.template": false,
+  "javascript.format.enable": false,
+  
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "go.gopath": "/Users/yoshidatatsuya/go",
+  "emmet.includeLanguages": {
+    "erb": "html",
+  },
+  "files.autoSave": "onFocusChange",
+  "dart.flutterSdkPath": "/Users/yoshidatatsuya/flutter",
+  "window.titleBarStyle": "native",
+
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<Up>"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["<Down>"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["<Left>"],
+      "after": ["<Nop>"]
+    },
+    {
+      "before": ["<Right>"],
+      "after": ["<Nop>"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j","j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vsicons.dontShowNewVersionMessage": true,
+  "html.mirrorCursorOnMatchingTag": false
+
+}
