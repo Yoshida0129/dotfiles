@@ -17,16 +17,22 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 
-
 NeoBundleCheck
 NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'croaker/mustang-vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'tomasr/molokai'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'scrooloose/nerdtree'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+let g:neosnippet#snippets_directory='~/dotfile/vimfiles/.vim/bundle/neosnippet-snippets/snippets/'
+
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 "
@@ -61,7 +67,6 @@ set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
 
-
 " 見た目系
 " 行番号を表示
 set number
@@ -90,6 +95,7 @@ nnoremap <Down> <Nop>
 nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
+nnoremap <C-]> <ESC>
 " シンタックスハイライトの有効化
 syntax enable
 
