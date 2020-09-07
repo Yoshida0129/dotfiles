@@ -3,3 +3,4 @@ dein/repo/*
 .vim/*
 nvim/repos/*
 nvim/dein/*
+.gitconfig
