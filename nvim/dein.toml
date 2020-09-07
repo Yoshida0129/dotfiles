@@ -24,3 +24,9 @@ repo = 'preservim/nerdtree'
 hook_add = '''	
 nnoremap <C-n> :NERDTreeToggle<CR>
 '''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
