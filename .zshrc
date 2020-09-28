@@ -3,9 +3,6 @@ autoload -U compinit; compinit -u
 autoload history-search-end
 
 export LANG=ja_JP.UTF-8
-export PATH="/Library/Ruby/Gems/2.3.0:$PATH"$
-export PATH="/Users/yoshidatatsuya/.gem/ruby/2.3.0:$PATH"$
-export PATH="/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/lib/ruby/gems/2.3.0:$PATH"$
 export PATH=$PATH:~/.anyenv/envs/ndenv/versions/v6.9.4/lib/node_modules/vue-cli/bin
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
@@ -13,27 +10,16 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH=$PATH:"$HOME/flutter/bin"
 export PATH=$PATH:"$HOME/Tool"
 export EDITOR=vim
-# export XDG_CONFIG_HOME='~/dotfiles'
 export NO_UPDATE_NOTIFIER=true
+
 
 alias reload="exec $SHELL -l"
 alias vi="nvim"
-alias g="git"
-alias n="npm"
-alias bi="bundle install"
-alias dc="docker-compose"
-alias ls="ls -GF"
 alias gls="gls --color"
-alias ll="ls -a"
 alias js="osascript -l JavaScript"
 alias aptitude='nocorrect aptitude'
 alias mysql='nocorrect mysql'
 alias sudo='nocorrect sudo'
-#path
-alias vzshrc='vi ~/dotfiles/.zshrc'
-alias vvimrc='vi ~/dotfiles/.vimrc'
-alias godotfiles='cd ~/dotfiles'
-alias nvimfolder='~/dotfiles/nvim'
 alias projects="~/projects"
 
 bindkey -r '^J' # Ctrl-j
@@ -50,14 +36,13 @@ zstyle ':completion:*' list-colors ''
 # 大文字小文字を区別しない（大文字を入力した場合は区別する）
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-function cd ()
-{
-    builtin cd "$@" && ls
+function cd() {
+  builtin cd "$@" && ls
 }
 
 # add file arrow
 function powerline_precmd() {
-    PS1="$(powerline-shell --shell zsh $?)"
+  PS1="$(powerline-shell --shell zsh $?)"
 }
 
 function install_powerline_precmd() {
@@ -84,7 +69,7 @@ fi
 eval "$(anyenv init -)"
 
 if [ "$TERM" != "linux" ]; then
-    install_powerline_precmd
+  install_powerline_precmd
 fi
 
 # brew files
