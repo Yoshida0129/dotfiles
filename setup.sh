@@ -24,6 +24,7 @@ function deploy() {
     ln -fnsv ~/dotfiles/.zprofile ~/.zprofile
     ln -fnsv ~/dotfiles/.zshrc ~/.zshrc
     ln -fnsv ~/dotfiles/.Brewfile ~/.Brewfile
+    ln -fnsv ~/dotfiles/.tmux.conf ~/.tmux.conf
 
     touch ~/.zprofile_local
     touch ~/.gitconfig.local
