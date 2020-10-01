@@ -12,7 +12,6 @@ export PATH=$PATH:"$HOME/Tool"
 export EDITOR=vim
 export NO_UPDATE_NOTIFIER=true
 
-
 alias reload="exec $SHELL -l"
 alias vi="nvim"
 alias gls="gls --color"
@@ -66,7 +65,8 @@ function install_powerline_precmd() {
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-eval "$(anyenv init -)"
+
+# eval "$(anyenv init -)"
 
 if [ "$TERM" != "linux" ]; then
   install_powerline_precmd
