@@ -20,6 +20,7 @@ alias aptitude='nocorrect aptitude'
 alias mysql='nocorrect mysql'
 alias sudo='nocorrect sudo'
 alias projects="~/projects"
+alias gomi='rm'
 
 bindkey -r '^J' # Ctrl-j
 
