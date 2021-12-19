@@ -1,8 +1,8 @@
 {
     "explorer.confirmDragAndDrop": false,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Rainbow Contrast (rainglow)",
+    "workbench.iconTheme": "Monokai Pro (Filter Spectrum) Icons",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
     "workbench.editor.enablePreview": false,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "boundary",
@@ -96,6 +96,14 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
-  }
+  },
+  "vim.visualModeKeyBindings": [
+  
+  ],
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off"
 
 }
