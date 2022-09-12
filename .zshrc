@@ -24,10 +24,11 @@ alias mysql='nocorrect mysql'
 alias sudo='nocorrect sudo'
 alias projects="~/projects"
 alias ls='ls -F --color=auto'
-alias l="ls -C"
-alias ll="ls -al"
-alias la="ls -A"
+alias l="ls -C --color=always"
+alias ll="ls -al --color=always"
+alias la="ls -A --color=always"
 alias gs='git status'
+alias LESS='less -R'
 # alias gomi='rm'
 
 bindkey -r '^J' # Ctrl-j
