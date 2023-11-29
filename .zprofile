@@ -28,3 +28,5 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 export ZDOTDIR="$HOME/dotfiles/"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"

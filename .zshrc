@@ -4,8 +4,7 @@ autoload history-search-end
 
 export LANG=ja_JP.UTF-8
 export GOPATH=$HOME/go
-export PATH=$HOME/Library/Python/3.8/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=$HOME/Library/Python/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export EDITOR=vim
 export NO_UPDATE_NOTIFIER=true
 export HISTFILE=~/dotfiles/.zsh_history
